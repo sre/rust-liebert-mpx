@@ -1,0 +1,201 @@
+<html><head>
+<meta name="Pragma" content="no-cache">
+<meta name="generator" content="Liebert Corporation 2007-2009">
+<meta http-equiv="refresh" content="30">
+<base target="detailArea">
+<link rel="stylesheet" type="text/css" href="../rightPanelStyle.css">
+<link rel="stylesheet" type="text/css" href="./rpcStyle.css">
+<style type="text/css">
+<!--
+#popWin {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:200;}
+#popWin2 {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:200;text-align:right}
+-->
+</style>
+<script language="JavaScript" type="text/javascript" src="../NicCookie_js.js"></script>
+<script language="JavaScript" type="text/javascript" src="../genPurpose_js.js"></script>
+<script language="JavaScript" type="text/javascript" src="../tabs/tabs_js.js"></script>
+<script language="JavaScript" type="text/javascript" src="./rpcImages_js.js"></script>
+<script language="JavaScript" type="text/javascript" src="./rpc_js.js"></script>
+<script language="JavaScript" type="text/javascript">
+// <!--
+
+var titleText="Branch Module";
+
+var hier1Text="";
+var hier1TruncText="";
+
+var hier2Text="";
+var hier2TruncText="";
+
+function DoOnLoad()
+{
+    /*
+    if(parent.frames[1] != undefined)
+    {
+        parent.frames[1].ActivateNavNode('imgAps');
+    }
+    */
+
+    if(nicContext.monDetailPage != undefined && nicContext.monDetailPage != "")
+    {
+        DisplayMonDetails(nicContext.monDetailPage);
+    }
+    else
+    {
+        DisplayMonDetails("imgEvents");
+    }
+}
+
+function DoOnUnload()
+{
+    //CancelPageReload();
+}
+
+function GoHome()
+{
+    window.location.href = "/rpc/rpcAps.htm";
+}
+function GoUp()
+{
+    var hier1Id = GetUrlStateElementValue('hier1Id');
+
+    var urlState = FormatUrlState('std', hier1Id, 0, 0, 0, 0, 0);
+
+    window.location.href = "/dp/" + urlState + "/rpc/rpcAps.htm";
+}
+function LoadInstance(urlState)
+{
+    window.location.href = "/dp/" + urlState + "/rpc/rpcRem.htm";
+}
+
+function LoadChild(urlState)
+{
+    window.location.href = "/dp/" + urlState + "/rpc/rpcReceptacle.htm";
+}
+
+// -->
+</script>
+</head><body bgcolor="#FFFFFF" class="defaultTableStyle"  onload="DoOnLoad();" onunload="DoOnUnload();">
+<div ID="popWin"></div><div ID="popWin2"></div><script language="JavaScript" type="text/javascript" src="../hover_js.js"></script>
+<div id="IdentPanelArea" class="identPanelArea">
+    <table border="0" width="860" height="30">
+        <tr>
+            <td class="headerTextStyle" width="250"><script>document.write(titleText);</script></td></tr></table></div><div id="mmHeaderPanelArea" class="mmHeaderPanelArea">
+    <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="mmTitle">Select a branch to view:</td></tr><tr>
+            <td><table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th style="width:20px;">&nbsp;</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:100px;">Branch</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:200px;">Label</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:70px;">Line</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:60px;">Amps</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:60px;">% Load</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:110px;">Load Status</th></tr>                    <tr style="background:#e1e5ef;"><td class="mmDetail"><img src="../../../images/accept.png"></td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" nowrap><a  class="hoverLink" href="javascript:LoadInstance('std:1.1.1_0.1.0');"><img border="0" src="../../../rpc/images/id_1_silver_up.jpg"></a><a  class="hoverLink" href="javascript:LoadChild('std:1.1.1_0.1.0');"><img border="0" src="../../../rpc/images/drillDown_silver_up.jpg"></a></td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="white-space:nowrap;">Branch 1.1</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">L3-N</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">0.00</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">0.0</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="width:110px;"><div id="graphArea_1" class="graphContainer"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="0px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/n.gif"  width="90px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/m.gif"  width="5px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="5px"  height="10px"><div id="graphArea_indicator" class="graphIndicator"style="top: 0px; left:-4px;"><img src="../../../rpc/indicator_sm.gif"></div></div></td></tr>                                        <tr><td class="mmDetail"><img src="../../../images/accept.png"></td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" nowrap><a  class="hoverLink" href="javascript:LoadInstance('std:1.2.1_0.2.0');"><img border="0" src="../../../rpc/images/id_2_silver_up.jpg"></a><a  class="hoverLink" href="javascript:LoadChild('std:1.2.1_0.2.0');"><img border="0" src="../../../rpc/images/drillDown_silver_up.jpg"></a></td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="white-space:nowrap;">Branch 1.2</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">L2-N</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">0.00</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">0.0</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="width:110px;"><div id="graphArea_1" class="graphContainer"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="0px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/n.gif"  width="90px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/m.gif"  width="5px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="5px"  height="10px"><div id="graphArea_indicator" class="graphIndicator"style="top: 0px; left:-4px;"><img src="../../../rpc/indicator_sm.gif"></div></div></td></tr>                                        <tr><td class="mmDetail"><img src="../../../images/accept.png"></td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" nowrap><a  class="hoverLink" href="javascript:LoadInstance('std:1.3.1_0.3.0');"><img border="0" src="../../../rpc/images/id_3_silver_up.jpg"></a><a  class="hoverLink" href="javascript:LoadChild('std:1.3.1_0.3.0');"><img border="0" src="../../../rpc/images/drillDown_silver_up.jpg"></a></td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="white-space:nowrap;">Branch 1.3</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">L1-N</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">0.00</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">0.0</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="width:110px;"><div id="graphArea_1" class="graphContainer"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="0px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/n.gif"  width="90px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/m.gif"  width="5px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="5px"  height="10px"><div id="graphArea_indicator" class="graphIndicator"style="top: 0px; left:-4px;"><img src="../../../rpc/indicator_sm.gif"></div></div></td></tr>                                        
+                                    </table></td></tr></table></div><div id="navButtonArea" class="navButtonArea" >
+    <table border="0" cellspacing="0" cellpadding="0" width="120px" style="table-layout:fixed;">
+        <tr>
+            <td><a class="hoverLink" href="javascript:GoHome();"><img border="0" src="../../../rpc/images/Home_silver_up.jpg"></a></td><td>&nbsp;</td><td><a class="hoverLink" href="javascript:GoUp();"><img border="0" src="../../../rpc/images/Up_silver_up.jpg"></a></td></tr></table></div><div id="licensePlateArea" class="licensePlateArea" >
+    <script language="JavaScript" type="text/javascript">
+    // <!--
+    hier1Text="PDU Entrance";
+        hier1TruncText=truncateStr(hier1Text, truncateAtChar);
+
+    hier2Text="Branch 1.1";
+        hier2TruncText=truncateStr(hier2Text, truncateAtChar);
+    // -->
+    </script>
+    <table border="1" cellspacing="0" cellpadding="0" style="width:120px;table-layout: fixed;">
+        <tr>
+            <td rowspan="2"><center><img src="../../../rpc/images/brm_icon.jpg"></center></td><td class="lpBold" style="border-bottom:0px; width:40"><b><center>ID</center></b></td></tr><tr>
+            <td class="lpBold" style="border-top:0px;">
+                <b><center>1-3</center></b>
+            </td></tr><tr>
+            <td colspan="2">
+                <table border="0" cellspacing="0" cellpadding="0" width="100px">
+                    <tr>
+                        <td class="lpBold">
+                            PDU:&nbsp;1                        </td></tr><tr>
+                        <td class="lpNormal">
+                            <span title="PDU Entrance">
+                            &nbsp;&nbsp;<script>document.write(hier1TruncText)</script>
+                            </span>
+                        </td></tr><tr>
+                        <td class="lpBold">
+                            Branch:&nbsp;3                        </td></tr><tr>
+                        <td class="lpNormal">
+                            <span title="Branch 1.1">
+                            &nbsp;&nbsp;<script>document.write(hier2TruncText)</script>
+                            </span>
+                        </td></tr></table></td></tr><!--
+        <tr>
+            <td colspan="2">
+                <table border="0" cellspacing="0" cellpadding="0" width="100px">
+                    <tr ONMOUSEOVER="truncPopup(hier2Text,'white');" ONMOUSEOUT="popdown2();">
+                        <td class="lpBold">
+                            <b>ID:&nbsp;1-3</b>
+                        </td></tr></table></td></tr>-->
+    </table></div><div id="DetailHeaderArea" class="detailHeaderArea">
+    <table border="0" height="20" cellpadding="0" cellspacing="0">
+        <tr>
+            <td id="RpcStatusAreaL" name="RpcStatusAreaL" class="subPageHeaderStyle">
+                <a target="detailArea"
+                    onmouseout="imageOff('imgStatus')"
+                    onclick="DisplayMonDetails('imgStatus');"
+                    onmouseover="imageOn('imgStatus');"
+                >
+                    <img id="imgStatus" name="imgStatus" alt="status" border="0"
+                        src="../../../tabs/images/status_off.gif">
+                </a></td><td id="RpcAlarmAreaL" name="RpcAlarmAreaL" class="subPageHeaderStyle">
+                <a target="detailArea"
+                    onmouseout="imageOff('imgEvents')"
+                    onclick="DisplayMonDetails('imgEvents');"
+                    onmouseover="imageOn('imgEvents');"
+                >
+                    <img id="imgEvents" name="imgEvents" alt="events" border="0"
+                        src="../../../tabs/images/events_off.gif">
+                </a></td><td id="RpcSettingAreaL" name="RpcSettingAreaL" class="subPageHeaderStyle">
+                <a target="detailArea"
+                    onmouseout="imageOff('imgSettings')"
+                    onclick="DisplayMonDetails('imgSettings');"
+                    onmouseover="imageOn('imgSettings');"
+                >
+                    <img id="imgSettings" name="imgSettings" alt="settings" border="0"
+                        src="../../../tabs/images/settings_off.gif">
+                </a></td><td id="RpcInfoAreaL" name="RpcInfoAreaL" class="subPageHeaderStyle">
+                <a target="detailArea"
+                    onmouseout="imageOff('imgInfo')"
+                    onclick="DisplayMonDetails('imgInfo');"
+                    onmouseover="imageOn('imgInfo');"
+                >
+                    <img id="imgInfo" name="imgInfo" alt="ratings" border="0"
+                        src="../../../tabs/images/ratings_off.gif">
+                </a></td></tr></table></div><div id="DetailHeaderBarArea" class="detailHeaderBarArea">
+    <table border="0" cellpadding="0" cellspacing="0" width="860">
+        <tr style="height:10;"><td></td></tr></table></div><div id="RpcStatusArea" class="RpcStatusArea">
+    <table class="data" border="1" cellpadding="1" cellspacing="0">
+        <colgroup align=left width="300px">
+        <colgroup align=left width="0px">
+        <colgroup align=right width="100px">
+        <colgroup align=left width="75px">
+      <tr>
+        <th class="left" colspan="2">Supported Status</th><th class="right">Value</th><th class="left">Units</th></tr>              <tr><td colspan="2">Branch Accumulated Energy</td><td class="right">0.0</td><td>kWH</td></tr>              <tr><td colspan="2">Branch Voltage</td><td class="right">236.3</td><td>VAC</td></tr>              <tr><td colspan="2">Branch Current</td><td class="right">0.00</td><td>A AC</td></tr>              <tr><td colspan="2">Branch Available Current Until Alarm</td><td class="right">19.00</td><td>A AC</td></tr>              <tr><td colspan="2">Branch Percent Current Utilization</td><td class="right">0.0</td><td>%</td></tr>              <tr><td colspan="2">Branch Power</td><td class="right">0.0</td><td>W</td></tr>              <tr><td colspan="2">Branch Apparent Power</td><td class="right">0.0</td><td>VA</td></tr>              <tr><td colspan="2">Branch Power Factor</td><td class="right">0.00</td><td>&nbsp;</td></tr>                                                                                                                                                            </table></div><div id="RpcAlarmArea" class="RpcAlarmArea">
+    <table class="data" border="1" cellpadding="1" cellspacing="0">
+        <colgroup align=center width="30px">
+        <colgroup align=left width="250px">
+        <colgroup align=left width="75px">
+      <tr>
+        <th class="center">&nbsp;</th><th class="left">Supported Events</th><th class="left">Status</th></tr>        <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">Branch Low Voltage (LN)</td><td class="left">Inactive</td></tr>                                          <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">Branch Over Current</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">Branch Low Current</td><td class="left">Inactive</td></tr>                                          <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">Branch Failure</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">Branch Breaker Open</td><td class="left">Inactive</td></tr>                                        
+          </table></div><div id="RpcSettingArea" class="RpcSettingArea">
+    <table class="data" border="1" cellpadding="1" cellspacing="0">
+        <colgroup align=left width="300px">
+        <colgroup align=left width="0px">
+        <colgroup align=right width="350px">
+        <colgroup align=left width="75px">
+      <tr>
+        <th class="left" colspan="2">Supported Settings</th><th class="right">Value</th><th class="left">Units</th></tr>        <tr><td colspan="2">Branch User Assigned Label</td><td class="right">Branch 1.1</td><td>&nbsp;</td></tr>              <tr><td colspan="2">Branch Asset Tag 01</td><td class="right">&nbsp;</td><td>&nbsp;</td></tr>              <tr><td colspan="2">Branch Asset Tag 02</td><td class="right">&nbsp;</td><td>&nbsp;</td></tr>                                                        <tr><td colspan="2">Over Current Alarm Threshold</td><td class="right">95</td><td>%</td></tr>              <tr><td colspan="2">Over Current Warning Threshold</td><td class="right">90</td><td>%</td></tr>              <tr><td colspan="2">Low Current Alarm Threshold</td><td class="right">0</td><td>%</td></tr>                                                      
+          </table></div><div id="RpcInfoArea" class="RpcInfoArea">
+    <table class="data" border="1" cellpadding="1" cellspacing="0">
+        <colgroup align=left width="300px">
+        <colgroup align=left width="0px">
+        <colgroup align=right width="300px">
+        <colgroup align=left width="75px">
+      <tr>
+        <th class="left" colspan="2">Ratings and Information</th><th class="right">Value</th><th class="left">Units</th></tr>        <tr><td colspan="2">BRM Model</td><td class="right">MPXBRM-ERBC6N3N</td><td>&nbsp;</td></tr>              <tr><td colspan="2">Branch Receptacle Type</td><td class="right">IEC 60320 Sheet F C13</td><td>&nbsp;</td></tr>              <tr><td colspan="2">Branch Capabilities</td><td class="right">All Measurements/Control</td><td>&nbsp;</td></tr>              <tr><td colspan="2">Branch Line Source</td><td class="right">Type L3-N</td><td>&nbsp;</td></tr>              <tr><td colspan="2">Branch Rated Line Voltage</td><td class="right">230</td><td>VAC</td></tr>              <tr><td colspan="2">Branch Rated Line Current</td><td class="right">20</td><td>A AC</td></tr>              <tr><td colspan="2">Branch Rated Line Frequency</td><td class="right">50</td><td>Hz</td></tr>              <tr><td colspan="2">Firmware Version</td><td class="right">0-3-4-0</td><td>&nbsp;</td></tr>              <tr><td colspan="2">Branch Serial Number</td><td class="right">000000000000000000000000</td><td>&nbsp;</td></tr>            
+          </table></div>
+</body></html>

@@ -1,0 +1,139 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<meta name="Pragma" content="no-cache">
+<meta name="generator" content="Liebert Corporation 2007-2009, 2017">
+<!-- base href="http://pdu1.lan.mainframe.io/rpc/rpcReceptacleList.htm" -->
+<link rel="stylesheet" type="text/css" href="rpcReceptacleList_files/rightPanelStyle.css">
+<link rel="stylesheet" type="text/css" href="rpcReceptacleList_files/rpcStyle.css">
+<style type="text/css">
+.identPanelArea             { background:#31659c; position: absolute; visibility: visible; top: 0px; left: 0px; }
+.receptacleSearchArea       { position: absolute; visibility: visible;top: 40px; left: 5px; z-index: 1; }
+.receptacleSequenceArea     { position: absolute; visibility: visible;top: 90px; left: 5px; z-index: 1; }
+</style>
+<script language="JavaScript" type="text/javascript" src="rpcReceptacleList_files/NicCookie_js.js"></script>
+<script language="JavaScript" type="text/javascript" src="rpcReceptacleList_files/genPurpose_js.js"></script>
+<script language="JavaScript" type="text/javascript" src="rpcReceptacleList_files/rpc_js.js"></script>
+<script language="JavaScript" type="text/javascript">
+// <!--
+
+var checkTimerId = 0;
+var searchTimerId = 0;
+
+var refreshRate = 30*1000;
+
+g_preSortColumn=1;
+g_sortColumn=1;
+
+function rpcSelectCtx(urlState)
+{
+    document.location.href = "/dp/" + urlState + "/rpc/rpcReceptacle.htm";
+}
+
+// Refresh page
+var xmlhttp1 = createXMLHttpRequest();
+
+function AsyncRefresh()
+{
+    if(xmlhttp1 != null)
+    {
+        try
+        {
+            xmlhttp1.open("GET", "rpcReceptacleListData.htm", true);
+            xmlhttp1.onreadystatechange = AsyncRefreshCb;
+            xmlhttp1.send();
+        }
+        catch(e)
+        {
+        }
+    }
+    checkTimerId = window.setTimeout("AsyncRefresh();", refreshRate);
+}
+
+function AsyncRefreshCb()
+{
+    if(xmlhttp1 != null)
+    {
+        if(xmlhttp1.readyState == 4)
+        {
+            if(xmlhttp1.status == 200)
+            {
+                getObject('ReceptacleSequenceArea').innerHTML = xmlhttp1.responseText;
+                SortTable('rcpTable', '-1', 'alpha', false);
+                hideRowFinder('rcpTable',0,'searchBox');
+            }
+        }
+    }
+}
+
+function initPage()
+{
+    AsyncRefresh();
+    if(0 != checkTimerId)
+    {
+        window.clearTimeout(checkTimerId);
+        checkTimerId = 0;
+    }
+    checkTimerId = window.setTimeout("AsyncRefresh();", refreshRate);
+
+    if(0 != searchTimerId)
+    {
+        window.clearTimeout(searchTimerId);
+        searchTimerId = 0;
+    }
+
+    searchTimerId = window.setInterval("RepeatFindCB();", 200);
+    if(undefined != parent.frames[1])
+    {
+        parent.frames[1].ActivateNavNode('imgReceptacleList');
+    }
+}
+
+var oldValue;
+function RepeatFindCB()
+{
+    // Check if the table has loaded yet
+    var tblObj = getObject('rcpTable');
+    if(tblObj==null)
+    {
+        return;
+    }
+    
+    var boxValue=getObject('searchBox').value;
+    if(boxValue!=oldValue)
+    {
+        oldValue=boxValue;
+        hideRowFinder('rcpTable',0,'searchBox');
+    }
+}
+function NoEnter(e)
+{
+	var evt = e || window.event;
+	if (evt) {
+		var x = evt.which || evt.keyCode;
+		return (x != 13);
+	}
+	return true;
+}
+// -->
+</script>
+</head><body class="defaultTableStyle" onload="initPage();" bgcolor="#FFFFFF">
+<div id="IdentPanelArea" class="identArea">
+    <table border="0">
+        <tbody><tr>
+            <td>Device Explorer</td></tr></tbody></table></div><div id="ReceptacleSearchArea" class="receptacleSearchArea">
+    <table cellspacing="0" cellpadding="0" border="0">
+        <tbody><tr>
+            <td colspan="2"><b>Search For Label:</b></td></tr><tr>
+            <td width="25"></td><td width="362">
+                <form method="POST" action="/Forms/rpcReceptacleList_1">                    <input type="TEXT" name="searchBox" size="55" maxlength="55" id="searchBox" onkeypress="return NoEnter(event)">                </form></td></tr></tbody></table></div><div id="ReceptacleSequenceArea" class="receptacleSequenceArea"><table id="rcpTable" class="data" cellspacing="0" cellpadding="0" border="1">
+    <tbody><tr>
+        <th class="thReceptacleTable" style="width:50; display:none;">
+            <a href="javascript:SortBy('sysId');">Id</a></th><th class="thReceptacleTable" style="width:350;">
+            <a title="Label Sort" href="#" onclick="SortTable('rcpTable', '0', 'alpha', true); return false;">Receptacle User Assigned Label</a></th><th class="thReceptacleTable">
+            <a title="Id Sort" href="#" onclick="SortTable('rcpTable', '1', 'alpha', true); return false;">Id</a></th><th class="thReceptacleTable">
+            <a title="On/Off Sort" href="#" onclick="SortTable('rcpTable',
+            '2', 'alpha', true); return false;">O</a></th><th class="thReceptacleTable">
+            <a title="Control Sort" href="#" onclick="SortTable('rcpTable', '3', 'alpha', true); return false;">C</a></th><th class="thReceptacleTable">
+            <a title="Status Sort" href="#" onclick="SortTable('rcpTable', '4', 'alpha', true); return false;">S</a></th></tr>                                                                                                                                                    
+    <tr id="1-1-1"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.1_0.13.0');"><nobr>Receptacle 1.3.1</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.1_0.13.0');">1-1-1</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-1-2"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.2_0.14.0');"><nobr>Receptacle 1.3.2</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.2_0.14.0');">1-1-2</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-1-3"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.3_0.15.0');"><nobr>Receptacle 1.3.3</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.3_0.15.0');">1-1-3</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-1-4"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.4_0.16.0');"><nobr>Receptacle 1.3.4</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.4_0.16.0');">1-1-4</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-1-5"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.5_0.17.0');"><nobr>Receptacle 1.3.5</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.5_0.17.0');">1-1-5</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-1-6"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.6_0.18.0');"><nobr>Receptacle 1.3.6</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.3.6_0.18.0');">1-1-6</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-2-1"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.1_0.7.0');"><nobr>Receptacle 1.2.1</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.1_0.7.0');">1-2-1</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-2-2"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.2_0.8.0');"><nobr>Receptacle 1.2.2</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.2_0.8.0');">1-2-2</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-2-3"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.3_0.9.0');"><nobr>Receptacle 1.2.3</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.3_0.9.0');">1-2-3</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-2-4"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.4_0.10.0');"><nobr>Receptacle 1.2.4</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.4_0.10.0');">1-2-4</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-2-5"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.5_0.11.0');"><nobr>Receptacle 1.2.5</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.5_0.11.0');">1-2-5</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-2-6"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.6_0.12.0');"><nobr>Receptacle 1.2.6</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.2.6_0.12.0');">1-2-6</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-3-1"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.1_0.1.0');"><nobr>Receptacle 1.1.1</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.1_0.1.0');">1-3-1</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-3-2"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.2_0.2.0');"><nobr>Receptacle 1.1.2</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.2_0.2.0');">1-3-2</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-3-3"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.3_0.3.0');"><nobr>Receptacle 1.1.3</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.3_0.3.0');">1-3-3</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-3-4"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.4_0.4.0');"><nobr>Receptacle 1.1.4</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.4_0.4.0');">1-3-4</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-3-5"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.5_0.5.0');"><nobr>Receptacle 1.1.5</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.5_0.5.0');">1-3-5</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr><tr id="1-3-6"><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.6_0.6.0');"><nobr>Receptacle 1.1.6</nobr></a></td><td class="moduleLabelStyle"><a href="javascript:rpcSelectCtx('std:1.1.6_0.6.0');">1-3-6</a></td><td class="moduleIndexStyle"><span title="On"><img src="rpcReceptacleList_files/isoOn_brdr.jpg"></span></td><td class="moduleIndexStyle" style="width:20px"><span title="Unlocked"><img src="rpcReceptacleList_files/lock_open.png"></span></td><td class="moduleIndexStyle"><img src="rpcReceptacleList_files/accept.png"></td></tr></tbody></table><br></div>
+</body></html>

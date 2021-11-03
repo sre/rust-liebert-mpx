@@ -1,0 +1,162 @@
+<html><head>
+<meta name="Pragma" content="no-cache">
+<meta name="generator" content="Liebert Corporation 2007-2009">
+<meta http-equiv="refresh" content="30">
+<base target="detailArea">
+<link rel="stylesheet" type="text/css" href="../rightPanelStyle.css">
+<link rel="stylesheet" type="text/css" href="./rpcStyle.css">
+<style type="text/css">
+<!--
+#popWin {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:200;}
+#popWin2 {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:200;text-align:right}
+-->
+</style>
+<script language="JavaScript" type="text/javascript" src="../NicCookie_js.js"></script>
+<script language="JavaScript" type="text/javascript" src="../genPurpose_js.js"></script>
+<script language="JavaScript" type="text/javascript" src="../tabs/tabs_js.js"></script>
+<script language="JavaScript" type="text/javascript" src="./rpcImages_js.js"></script>
+<script language="JavaScript" type="text/javascript" src="./rpc_js.js"></script>
+<script language="JavaScript" type="text/javascript">
+// <!--
+var titleText="PDU Explorer";
+
+var hier1Text="";
+var hier1TruncText="";
+
+function DoOnLoad()
+{
+    if(nicContext != undefined)
+    {
+        if(nicContext.monDetailPage != undefined && nicContext.monDetailPage != "")
+        {
+            DisplayMonDetails(nicContext.monDetailPage);
+        }
+        else
+        {
+            DisplayMonDetails("imgEvents");
+        }
+    }
+}
+
+function GoHome()
+{
+    window.location.href = "/rpc/rpcAps.htm";
+}
+function LoadInstance(urlState)
+{
+    window.location.href = "/dp/" + urlState + "/rpc/rpcAps.htm";
+}
+
+function LoadChild(urlState)
+{
+    window.location.href = "/dp/" + urlState + "/rpc/rpcRem.htm";
+}
+
+// -->
+</script>
+</head><body bgcolor="#FFFFFF" class="defaultTableStyle" onload="DoOnLoad();">
+<div ID="popWin"></div><div ID="popWin2"></div><script language="JavaScript" type="text/javascript" src="../hover_js.js"></script>
+<div id="IdentPanelArea" class="identArea_long">
+    <table border="0">
+        <tr>
+            <td><script>document.write(titleText);</script></td></tr></table></div><div id="mmHeaderPanelArea" class="mmHeaderPanelArea">
+    <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="mmTitle">Select a PDU to view:</td></tr><tr>
+            <td><table border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th style="width:20px;">&nbsp;</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:100px;">PDU</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:200px;">Label</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:50px;">Line</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:60px;">Amps</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:60px;">% Load</th><th class="mmColSpacer">&nbsp;</th><th class="mmHeader" style="width:110px;">Load Status</th></tr>                    <tr style="background:#e1e5ef;"><td class="mmDetail" style="width:20px;"><img src="../../../images/accept.png"></td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="text-align:left; width:100px;" nowrap><a  class="hoverLink" href="javascript:LoadInstance('std:1.1.1_0.1.0');"><img border="0" src="../../../rpc/images/id_1_silver_up.jpg"></a><a  class="hoverLink" href="javascript:LoadChild('std:1.1.1_0.1.0');"><img border="0" src="../../../rpc/images/drillDown_silver_up.jpg"></a></td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="white-space:nowrap;">PDU Entrance</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="width:50px;">L1</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="width:60px;">0.00</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="width:60px;">0.0</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="width:110px;"><div id="graphArea_1" class="graphContainer"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="0px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/n.gif"  width="75px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/m.gif"  width="5px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="20px"  height="10px"><div id="graphArea_indicator" class="graphIndicator"style="top: 0px; left:-4px;"><img src="../../../rpc/indicator_sm.gif"></div></div></td></tr><tr style="background:#e1e5ef;"><td class="mmColSpacer">&nbsp;</td><td class="mmColSpacer">&nbsp;</td><td class="mmColSpacer">&nbsp;</td><td class="mmColSpacer">&nbsp;</td><td class="mmColSpacer">&nbsp;</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">L2</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">0.00</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">0.0</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="width:110px;"><div id="graphArea_1" class="graphContainer"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="0px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/n.gif"  width="75px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/m.gif"  width="5px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="20px"  height="10px"><div id="graphArea_indicator" class="graphIndicator"style="top: 0px; left:-4px;"><img src="../../../rpc/indicator_sm.gif"></div></div></td></tr><tr style="background:#e1e5ef;"><td class="mmColSpacer">&nbsp;</td><td class="mmColSpacer">&nbsp;</td><td class="mmColSpacer">&nbsp;</td><td class="mmColSpacer">&nbsp;</td><td class="mmColSpacer">&nbsp;</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">L3</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">0.00</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail">0.0</td><td class="mmColSpacer">&nbsp;</td><td class="mmDetail" style="width:110px;"><div id="graphArea_1" class="graphContainer"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="0px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/n.gif"  width="75px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/m.gif"  width="5px"  height="10px"><img style="vertical-align:middle"  src="../../../rpc/l.gif"  width="20px"  height="10px"><div id="graphArea_indicator" class="graphIndicator"style="top: 0px; left:-4px;"><img src="../../../rpc/indicator_sm.gif"></div></div></td></tr>                                        
+                                    </table></td></tr></table></div><div id="navButtonArea" class="navButtonArea" >
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <tr>
+            <td><a class="hoverLink" href="javascript:GoHome();"><img border="0" src="../../../rpc/images/Home_silver_up.jpg"></a></td></tr></table></div><div id="licensePlateArea" class="licensePlateArea" >
+    <script language="JavaScript" type="text/javascript">
+    // <!--
+    hier1Text="PDU Entrance";
+        hier1TruncText=truncateStr(hier1Text, truncateAtChar);
+    // -->
+    </script>
+    <table border="1" cellspacing="0" cellpadding="0" style="width:120px;table-layout: fixed;">
+        <tr>
+            <td rowspan="2"><center><img src="../../../rpc/images/pdu_icon.jpg"></center></td><td class="lpBold" style="border-bottom:0px; width:35"><b><center>ID</center></b></td></tr><tr>
+            <td class="lpBold" style="border-top:0px;">
+                <b><center>1</center></b>
+            </td></tr><tr>
+            <td colspan="2">
+                <span title="PDU Entrance">
+                <table border="0" cellspacing="0" cellpadding="0" width="100px">
+                    <tr>
+                        <td class="lpBold">
+                            PDU:&nbsp;1                        </td></tr><tr>
+                        <td class="lpNormal">
+                            &nbsp;&nbsp;<script>document.write(hier1TruncText)</script>
+                        </td></tr></table></span>
+            </td></tr></table></div><div id="DetailHeaderArea" class="detailHeaderArea">
+    <table border="0" height="20" cellpadding="0" cellspacing="0">
+        <tr>
+            <td id="RpcStatusAreaL" name="RpcStatusAreaL" class="subPageHeaderStyle">
+                <a target="detailArea"
+                    onmouseout="imageOff('imgStatus')"
+                    onclick="DisplayMonDetails('imgStatus');"
+                    onmouseover="imageOn('imgStatus');"
+                >
+                    <img id="imgStatus" name="imgStatus" alt="status" border="0"
+                        src="../../../tabs/images/status_off.gif">
+                </a></td><td id="RpcAlarmAreaL" name="RpcAlarmAreaL" class="subPageHeaderStyle">
+                <a target="detailArea"
+                    onmouseout="imageOff('imgEvents')"
+                    onclick="DisplayMonDetails('imgEvents')"
+                    onmouseover="imageOn('imgEvents');"
+                >
+                    <img id="imgEvents" name="imgEvents" alt="events" border="0"
+                        src="../../../tabs/images/events_off.gif">
+                </a></td><td id="RpcSettingAreaL" name="RpcSettingAreaL" class="subPageHeaderStyle">
+                <a target="detailArea"
+                    onmouseout="imageOff('imgSettings')"
+                    onclick="DisplayMonDetails('imgSettings');"
+                    onmouseover="imageOn('imgSettings');"
+                >
+                    <img id="imgSettings" name="imgSettings" alt="settings" 
+                    border="0" src="../../../tabs/images/settings_off.gif">
+                </a></td><td id="RpcInfoAreaL" name="RpcInfoAreaL" class="subPageHeaderStyle">
+                <a target="detailArea"
+                    onmouseout="imageOff('imgInfo')"
+                    onclick="DisplayMonDetails('imgInfo');"
+                    onmouseover="imageOn('imgInfo');"
+                >
+                    <img id="imgInfo" name="imgInfo" alt="info" border="0"
+                        src="../../../tabs/images/ratings_off.gif">
+                </a></td></tr></table></div><div id="DetailHeaderBarArea" class="detailHeaderBarArea">
+    <table border="0" cellpadding="0" cellspacing="0" width="860">
+        <tr style="height:10;"><td></td></tr></table></div><div id="RpcStatusArea" class="RpcStatusArea" >
+    <table class="data" cellpadding="1" cellspacing="0" border="1">
+        <colgroup width="300px">
+        <colgroup width="0px">
+        <colgroup width="100px">
+        <colgroup width="75px">
+      <tr>
+        <th class="left" colspan="2">Supported Status</th><th class="right">Value</th><th class="left">Units</th></tr>        <tr><td colspan="2">PDU Accumulated Energy</td><td class="right">0.0</td><td>kWH</td></tr>                                                                      <tr><td colspan="2">PDU Total Input Power</td><td class="right">9.6</td><td>W</td></tr>                                                                                                                <tr><td colspan="2">PDU Voltage L1-N</td><td class="right">233.8</td><td>VAC</td></tr>              <tr><td colspan="2">PDU Voltage L2-N</td><td class="right">235.2</td><td>VAC</td></tr>              <tr><td colspan="2">PDU Voltage L3-N</td><td class="right">234.8</td><td>VAC</td></tr>              <tr><td colspan="2">PDU Current L1</td><td class="right">0.00</td><td>A AC</td></tr>              <tr><td colspan="2">PDU Current L2</td><td class="right">0.00</td><td>A AC</td></tr>              <tr><td colspan="2">PDU Current L3</td><td class="right">0.00</td><td>A AC</td></tr>              <tr><td colspan="2">PDU Available L1 Current Until Alarm</td><td class="right">25.60</td><td>A AC</td></tr>              <tr><td colspan="2">PDU Percent L1 Current Utilization</td><td class="right">0.0</td><td>%</td></tr>              <tr><td colspan="2">PDU Available L2 Current Until Alarm</td><td class="right">25.60</td><td>A AC</td></tr>              <tr><td colspan="2">PDU Percent L2 Current Utilization</td><td class="right">0.0</td><td>%</td></tr>              <tr><td colspan="2">PDU Available L3 Current Until Alarm</td><td class="right">25.60</td><td>A AC</td></tr>              <tr><td colspan="2">PDU Percent L3 Current Utilization</td><td class="right">0.0</td><td>%</td></tr>              <tr><td colspan="2">PDU Neutral Current Measurement</td><td class="right">0.00</td><td>A AC</td></tr>              <tr><td colspan="2">PEM Line Frequency</td><td class="right">50.1</td><td>Hz</td></tr>            
+          </table></div><div id="RpcAlarmArea" class="RpcAlarmArea">
+    <table class="data" border="1" cellpadding="1" cellspacing="0">
+        <colgroup width="30px">
+        <colgroup width="250px">
+        <colgroup width="100px">
+      <tr>
+        <th class="center">&nbsp;</th><th class="left">Supported Events</th><th class="left">Status</th></tr>                                                                                    <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Low Voltage L1-N</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Low Voltage L2-N</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Low Voltage L3-N</td><td class="left">Inactive</td></tr>                                                                      <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Over Current L1</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Over Current L2</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Over Current L3</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Low Current L1</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Low Current L2</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Low Current L3</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Failure</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Communication Fail</td><td class="left">Inactive</td></tr>              <tr><td class="tdIcon"><img src="../../../images/accept.png"></td><td class="left">PDU Neutral Over Current</td><td class="left">Inactive</td></tr>                </table></div><div id="RpcSettingArea" class="RpcSettingArea">
+    <table class="data" border="1" cellpadding="1" cellspacing="0">
+        <colgroup width="250px">
+        <colgroup width="0px">
+        <colgroup width="350px">
+        <colgroup width="75px">
+      <tr>
+        <th class="left" colspan="2">Supported Settings</th><th class="right">Value</th><th class="left">Units</th></tr>        <tr><td colspan="2">PDU User Assigned Label</td><td class="right">PDU Entrance</td><td>&nbsp;</td></tr>              <tr><td colspan="2">PDU Asset Tag 01</td><td class="right">&nbsp;</td><td>&nbsp;</td></tr>              <tr><td colspan="2">PDU Asset Tag 02</td><td class="right">&nbsp;</td><td>&nbsp;</td></tr>              <tr><td colspan="2">Neutral Over Current Alarm Threshold</td><td class="right">80</td><td>%</td></tr>              <tr><td colspan="2">Neutral Over Current Warning Threshold</td><td class="right">75</td><td>%</td></tr>                                                                                                  <tr><td colspan="2">Over Current Alarm Threshold L1</td><td class="right">80</td><td>%</td></tr>              <tr><td colspan="2">Over Current Alarm Threshold L2</td><td class="right">80</td><td>%</td></tr>              <tr><td colspan="2">Over Current Alarm Threshold L3</td><td class="right">80</td><td>%</td></tr>              <tr><td colspan="2">Over Current Warn Threshold L1</td><td class="right">75</td><td>%</td></tr>              <tr><td colspan="2">Over Current Warn Threshold L2</td><td class="right">75</td><td>%</td></tr>              <tr><td colspan="2">Over Current Warn Threshold L3</td><td class="right">75</td><td>%</td></tr>              <tr><td colspan="2">Low Current Alarm Threshold L1</td><td class="right">0</td><td>%</td></tr>              <tr><td colspan="2">Low Current Alarm Threshold L2</td><td class="right">0</td><td>%</td></tr>              <tr><td colspan="2">Low Current Alarm Threshold L3</td><td class="right">0</td><td>%</td></tr>            
+          </table></div><div id="RpcInfoArea" class="RpcInfoArea">
+    <table class="data" border="1" cellpadding="1" cellspacing="0">
+        <colgroup align=left width="250px">
+        <colgroup align=left width="0px">
+        <colgroup align=right width="250px">
+        <colgroup align=left width="75px">
+      <tr>
+        <th class="left" colspan="2">Ratings and Information</th><th class="right">Value</th><th class="left">Units</th></tr>        <tr><td colspan="2">PEM Model</td><td class="right">MPXPEM-EHAXXR30</td><td>&nbsp;</td></tr>              <tr><td colspan="2">The PDU input wiring type</td><td class="right">3-Phase / 5-Wire (L1, L2, L3, N, PE)</td><td>&nbsp;</td></tr>              <tr><td colspan="2">Rated Input Line Voltage</td><td class="right">230</td><td>VAC</td></tr>              <tr><td colspan="2">Rated Input Line Current</td><td class="right">32</td><td>A AC</td></tr>              <tr><td colspan="2">Rated Input Line Frequency</td><td class="right">50</td><td>Hz</td></tr>              <tr><td colspan="2">Firmware Version</td><td class="right">0-3-4-2</td><td>&nbsp;</td></tr>              <tr><td colspan="2">PEM Serial Number</td><td class="right">000000000000000000000000</td><td>&nbsp;</td></tr>            
+          </table></div>
+</body></html>
